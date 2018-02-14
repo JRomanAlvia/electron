@@ -22,22 +22,20 @@ window.addEventListener('load', function () {
 
         $.ajax({
             type: "GET",
-            url: "http://sindrome-down.herokuapp.com/usuarios/datos",
+            url: "https://sindrome-down.herokuapp.com/usuarios/datos",
             dataType: "json",
             contentType: "text/plain"
         }).done(function (msg) {
             for (var dato in msg[0]) {
                 contador++;
-                // varid = contador;
             }
 
             varid=contador;
-            confirm(varid + " lll " + contador);
             datos = { "id": varid, "nombre": varnombre, "correo": varemail, "mensaje": varmessage };
 
             $.ajax({
                 type: "POST",
-                url: "http://sindrome-down.herokuapp.com/usuarios/datos",
+                url: "https://sindrome-down.herokuapp.com/usuarios/datos",
                 dataType: "text",
                 contentType: "application/json",
                 data: JSON.stringify(datos)
