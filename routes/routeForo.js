@@ -22,21 +22,7 @@ routerUsuarios.route('/')
         })
     })
     .post(function (req, res, next) {
-        miRutaUsuarios.child(req.body.id).set(req.body)
-        var mail = req.body.correo
-        var mailOptions = {
-            from: 'Grupo 6',
-            to: mail,
-            subject: 'Bienvenido',
-            text: 'Gracias por enviarnos tu comentario, te responderemos lo mas breve posible.'
-        }
-        smtpTransport.sendMail(mailOptions, function (error, respuesta) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Mensaje enviado');
-            }
-        })
+        miRutaUsuarios.child(req.body.idComentario).child(req.body.seccion).child(req.body.id).set(req.body)
         res.status(200).send('ingreso correcto')
     })
     .put(function (req, res, next) {

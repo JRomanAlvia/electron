@@ -12,6 +12,8 @@ window.addEventListener('load', function () {
         mostrarOcultar('contenidoSD');       
     })
 
+    
+
     $("#btnenviar").click(function () {
 
         var contador = 0;
