@@ -22,7 +22,7 @@ window.addEventListener('load', function () {
 
         $.ajax({
             type: "GET",
-            url: "http://localhost:3000/usuarios/datos",
+            url: "http://sindrome-down.herokuapp.com/usuarios/datos",
             dataType: "json",
             contentType: "text/plain"
         }).done(function (msg) {
@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
 
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3000/usuarios/datos",
+                url: "http://sindrome-down.herokuapp.com/usuarios/datos",
                 dataType: "text",
                 contentType: "application/json",
                 data: JSON.stringify(datos)
