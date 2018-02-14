@@ -30,6 +30,7 @@ window.addEventListener('load', function () {
                 contador++;
                 // varid = contador;
             }
+
             varid=contador;
             confirm(varid + " lll " + contador);
             datos = { "id": varid, "nombre": varnombre, "correo": varemail, "mensaje": varmessage };

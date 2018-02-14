@@ -22,17 +22,7 @@ rutaForo.route('/')
     })
 })
 .post(function(req,res,next){
-    miRuta.child(req.body.id).set(req.body)
-    var email="jairo.romanaa@hotmail.com";
-    var message="Gracias por registrarte en nuestro sitio web! ";
-    var smtpTransport=nodemailer.createTransport('SMTP',{service:'Gmail',auth:{user:'helpdeskservicepow@gmail.com',pass:'abcde12345..'}})
-    var mailOptions={from:'Grupo 6',to:email,subject:'Help Desk Service',text:message}
-    smtpTransport.sendMail(mailOptions,function(error,respuesta){
-        if (error) {
-            console.log("error de mail")
-            console.log(error)
-        }else{console.log('Petición registrada!')};
-    });    
+    miRuta.child(req.body.id).set(req.body)    
     res.status(200).send('post version 1')
 })
 .put(function(req,res,next){
