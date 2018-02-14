@@ -68,6 +68,7 @@ window.addEventListener('load', function () {
                     }).done(function (msg) {
                         console.log(msg)
                         confirm('Comentario registrado con exito!')
+                        window.location.reload();
                     }).error(function (err) {
                         console.log(err)
                     });     
