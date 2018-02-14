@@ -206,24 +206,21 @@
 									<form method="post" action="#" id="contactForm" novalidate>
 										<div class="row uniform">
 											<div class="6u 12u$(xsmall)">
-												<input type="text" id="txtname" value="" placeholder="Nombre" required data-validation-required-message="Por favor ingresa tu nombre.">
+												<input type="text" id="txtname" value="" placeholder="Nombre" title="Ingrese su nombre" required>
 											</div>
 											<div class="6u$ 12u$(xsmall)">
-												<input type="email" id="txtemail" value="" placeholder="Correo" required data-validation-required-message="Por favor ingresa tu correo.">
+												<input type="email" id="txtemail" value="" placeholder="Correo" title="Ingrese su correo" required>
 											</div>
 											
 											<!-- Break -->
 											<div class="12u$">
-												<textarea id="txtmessage" placeholder="Escribe tu mensaje" rows="6" required data-validation-required-message="Por favor ingresa tu mensaje."></textarea>
+												<textarea id="txtmessage" placeholder="Escribe tu mensaje" rows="6" title="Ingrese su mensaje" required></textarea>
 											</div>
 											
 											<!-- Break -->
-											<div class="6u 12u$(small)">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
+											
 											<div class="6u$ 12u$(small)">
-												<input type="checkbox" id="demo-human" name="demo-human" >
+												<input type="checkbox" id="demo-human" name="demo-human" required>
 												<label for="demo-human">I am a human</label>
 											</div>
 											

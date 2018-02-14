@@ -2330,14 +2330,27 @@
 		width: 100%;
 	}
 
-		input[type="text"]:invalid,
-		input[type="password"]:invalid,
-		input[type="email"]:invalid,
-		input[type="tel"]:invalid,
-		input[type="search"]:invalid,
-		input[type="url"]:invalid,
-		select:invalid,
-		textarea:invalid {
+		input[type="text"]:required:invalid,
+		input[type="password"]:required:invalid,
+		input[type="email"]:required:invalid,
+		input[type="tel"]:required:invalid,
+		input[type="search"]:required:invalid,
+		input[type="url"]:required:invalid,
+		select:required:invalid,
+		textarea:required:invalid {
+			border: 1px solid red;
+			box-shadow: none;
+		}
+
+		input[type="text"]:required:valid,
+		input[type="password"]:required:valid,
+		input[type="email"]:required:valid,
+		input[type="tel"]:required:valid,
+		input[type="search"]:required:valid,
+		input[type="url"]:required:valid,
+		select:required:valid,
+		textarea:required:valid {
+			border: 1px solid green;
 			box-shadow: none;
 		}
 
