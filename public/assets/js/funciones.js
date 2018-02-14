@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
 
         $.ajax({
             type: "GET",
-            url: "https://sindrome-down.herokuapp.com/usuarios/datos",
+            url: "https://sindrome-down.herokuapp.com/datos/mensajes",
             dataType: "json",
             contentType: "text/plain"
         }).done(function (msg) {
@@ -42,7 +42,7 @@ window.addEventListener('load', function () {
 
             $.ajax({
                 type: "POST",
-                url: "https://sindrome-down.herokuapp.com/usuarios/datos",
+                url: "https://sindrome-down.herokuapp.com/datos/mensajes",
                 dataType: "text",
                 contentType: "application/json",
                 data: JSON.stringify(datos)

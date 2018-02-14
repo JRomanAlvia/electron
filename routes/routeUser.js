@@ -23,7 +23,7 @@ var smtpTransport=nodemailer.createTransport('SMTP',{
 let items=[]
 let contador=0
 
-let miRutaUsuarios = new Firebase('https://facci-project.firebaseio.com/foro')
+let miRutaUsuarios = new Firebase('https://facci-project.firebaseio.com/mensajes')
 let routerUsuarios=express.Router()
 routerUsuarios.use(bodyParser())
 routerUsuarios.route('/')
