@@ -10,10 +10,6 @@ let router=express.Router()
 router.use(bodyParser())
 router.route('/')
 
-var EmailCtrl = require('./controller/mailController');
-//email route
-router.post('/email', EmailCtrl.sendEmail);
-
 var port = Number(process.env.PORT || 3000);
 let app= express()
 .use('/usuarios/datos',routerUser)
