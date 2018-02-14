@@ -2336,9 +2336,10 @@
 		input[type="tel"]:required:invalid,
 		input[type="search"]:required:invalid,
 		input[type="url"]:required:invalid,
+		input[type="checkbox"]:required:invalid,
 		select:required:invalid,
 		textarea:required:invalid {
-			border: 1px solid red;
+			/* border: 1px solid red; */
 			box-shadow: none;
 		}
 
@@ -2348,6 +2349,7 @@
 		input[type="tel"]:required:valid,
 		input[type="search"]:required:valid,
 		input[type="url"]:required:valid,
+		input[type="checkbox"]:required:valid,
 		select:required:valid,
 		textarea:required:valid {
 			border: 1px solid green;
