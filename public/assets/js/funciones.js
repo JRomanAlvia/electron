@@ -41,6 +41,7 @@ window.addEventListener('load', function () {
                 data: JSON.stringify(datos)
             }).done(function (msg) {
                 console.log(msg)
+                confirm('Hemos recibido tu mensaje, nos contactaremos contigo!')
             }).error(function (err) {
                 console.log(err)
             }); 
