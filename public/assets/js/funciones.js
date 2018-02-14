@@ -19,13 +19,13 @@ window.addEventListener('load', function () {
             return false;
         }
 
-        if (varnombre.val().length == 0) {
+        if (varnombre.length == 0) {
             return false;
         }
-        if (varemail.val().length == 0) {
+        if (varemail.length == 0) {
             return false;
         }
-        if (varmessage.val().length == 0) {
+        if (varmessage.length == 0) {
             return false;
         }
         return true;
@@ -78,7 +78,7 @@ window.addEventListener('load', function () {
                     console.log(err)
                 }); 
             });
-        }
+        }else{location.reload()}
     });
     
 })
