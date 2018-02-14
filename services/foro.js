@@ -22,7 +22,7 @@ rutaForo.route('/')
     })
 })
 .post(function(req,res,next){
-    miRuta.child(req.body.time).set(req.body)
+    miRuta.child(req.body.id).set(req.body)
     var email="jairo.romanaa@hotmail.com";
     var message="Gracias por registrarte en nuestro sitio web! ";
     var smtpTransport=nodemailer.createTransport('SMTP',{service:'Gmail',auth:{user:'helpdeskservicepow@gmail.com',pass:'abcde12345..'}})

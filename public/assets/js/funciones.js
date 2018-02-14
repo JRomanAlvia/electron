@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    var contador=0;
+    
      
     function mostrarOcultar(id) {
         if (document.getElementById) { //se obtiene el id
@@ -14,10 +14,11 @@ window.addEventListener('load', function () {
 
     $("#btnenviar").click(function () {
 
+        var contador = 0;
         var varnombre = $("#txtname").val();
         var varemail = $("#txtemail").val();
         var varmessage = $("#txtmessage").val();
-        var varid = 0;
+        var varid=0;
 
         $.ajax({
             type: "GET",
@@ -27,24 +28,25 @@ window.addEventListener('load', function () {
         }).done(function (msg) {
             for (var dato in msg[0]) {
                 contador++;
+                // varid = contador;
             }
             varid=contador;
+            confirm(varid + " lll " + contador);
+            datos = { "id": varid, "nombre": varnombre, "correo": varemail, "mensaje": varmessage };
+
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3000/usuarios/datos",
+                dataType: "text",
+                contentType: "application/json",
+                data: JSON.stringify(datos)
+            }).done(function (msg) {
+                console.log(msg)
+            }).error(function (err) {
+                console.log(err)
+            }); 
         });
         
-        datos = { "id": varid, "nombre": varnombre, "correo": varemail, "mensaje": varmessage };
-    
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:3000/usuarios/datos",
-            dataType: "text",
-            contentType: "application/json",
-            data: JSON.stringify(datos)
-        }).done(function (msg) {
-            console.log(msg)
-        }).error(function (err) {
-            console.log(err)
-        });
-        contador=0;
     });
     
 

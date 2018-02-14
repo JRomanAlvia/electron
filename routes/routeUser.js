@@ -24,7 +24,7 @@ routerUsuarios.route('/')
     res.status(200).send('ingreso correcto')
 })
 .put(function(req,res,next){
-    miRutaUsuarios(req.body.correo).set(req.body)
+    miRutaUsuarios(req.body.id).set(req.body)
      res.status(200).send(req.body.codigo)
 })
 .delete(function(req,res,next){
