@@ -20,6 +20,13 @@ window.addEventListener('load', function () {
         var varmessage = $("#txtmessage").val();
         var varid=0;
 
+        if (varnombre=="") {
+            varnombre=="anonimo"
+        }
+        if (varemail == "") {
+            varemail == "anonimo"
+        }
+
         $.ajax({
             type: "GET",
             url: "https://sindrome-down.herokuapp.com/usuarios/datos",
