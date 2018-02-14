@@ -4,14 +4,10 @@ window.addEventListener('load', function () {
         var contador=0;
         var datosArray=[];
         var html='';
-        
-        // var html = '<dl><dt>No hay entradas</dt><dd><p>De momento no hay entradas disponibles.</p>';
-        // html += '<input type="text" placeholder="Ingresa un comentario" /><br><input id="btnenviar" type="button" value="Enviar" class="special"></dd><hr></dl>'
-        // document.querySelector('#contenidoForo').innerHTML = html;
 
         $.ajax({
             type: "GET",
-            url: "http://localhost:3000/datos/foro",
+            url: "https://sindrome-down.herokuapp.com/datos/foro",
             dataType: "json",
             contentType: "text/plain"
         }).done(function (msg) {
@@ -65,7 +61,7 @@ window.addEventListener('load', function () {
                     datosRes = { "id": varid, "nombre": txtNombreIdentificador, "mensaje": txtMensajeIdentificador,"idComentario":identificador,"seccion":"respuestas" };
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:3000/datos/foro",
+                        url: "https://sindrome-down.herokuapp.com/datos/foro",
                         dataType: "text",
                         contentType: "application/json",
                         data: JSON.stringify(datosRes)
@@ -74,51 +70,7 @@ window.addEventListener('load', function () {
                         confirm('Comentario registrado con exito!')
                     }).error(function (err) {
                         console.log(err)
-                    });
-
-
-                    // $.ajax({
-                    //     type: "GET",
-                    //     url: "http://localhost:3000/datos/foro",
-                    //     dataType: "json",
-                    //     contentType: "text/plain"
-                    // }).done(function (msg) {
-                    //     for (var dato in msg[0]) {
-                    //         if (identificador==contadorIdenComentario) {
-                    //             if (msg[0][contador].respuestas[0]) {
-                    //                 for (var datoRes in msg[0][contador].respuestas) {
-                    //                     contadorIdenRespuesta++;
-                    //                 }
-                    //             }
-                    //         }
-                    //     }
-
-                    //     varid = contadorIdenRespuesta;
-                    //     datos = { "id": varid, "nombre": varnombre, "correo": varemail, "mensaje": varmessage };
-                    //     $.ajax({
-                    //         type: "POST",
-                    //         url: "http://localhost:3000/datos/foro",
-                    //         dataType: "text",
-                    //         contentType: "application/json",
-                    //         data: JSON.stringify(datos)
-                    //     }).done(function (msg) {
-                    //         console.log(msg)
-                    //         confirm('Hemos recibido tu mensaje, nos contactaremos contigo!')
-                    //     }).error(function (err) {
-                    //         console.log(err)
-                    //     });
-                    // });
-
-                    
-                    // for (var dato in msg[0][contadorBtn].respuestas) {
-                    //     console.log(contadorBtn+" prueba")
-                    //     if (identificador==contadorBtn) {
-                    //         confirm("holi")
-                    //     }
-                    //     contadorBtn++;
-                    // }
-                    // console.log(identificador);
-
+                    });     
                 });
             });
 
