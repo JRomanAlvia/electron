@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
         }).done(function (msg) {
             for (var dato in msg[0]) {
                 contador++;
-                console.log(msg[0][contador].correo)
+                console.log(msg[0][contador].id)
             }
         }).error(function (err) {
             console.log(err)
