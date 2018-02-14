@@ -78,7 +78,7 @@ window.addEventListener('load', function () {
                     console.log(err)
                 }); 
             });
-        }else{location.reload()}
+        }
     });
     
 })
