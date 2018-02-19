@@ -2,10 +2,10 @@
   "name": "proyectosd",
   "version": "1.0.0",
   "description": "Proyecto integrador - Grupo 6",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "electron ."
   },
   "author": "Grupo 6",
   "license": "ISC",
@@ -13,7 +13,11 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "firebase": "^2.4.2",
+    "jquery": "^3.3.1",
     "nodemailer": "^0.7.1",
     "nodemon": "^1.14.12"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
   }
 }

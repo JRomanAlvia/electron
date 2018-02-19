@@ -1,5 +1,7 @@
 window.addEventListener('load', function () {
 
+    
+
     function generar(){
         var contador=0;
         var datosArray=[];
@@ -7,7 +9,8 @@ window.addEventListener('load', function () {
 
         $.ajax({
             type: "GET",
-            url: "https://sindrome-down.herokuapp.com/datos/foro",
+            url: "http://127.0.0.1:3000/datos/foro",
+            // url: "https://sindrome-down.herokuapp.com/datos/foro",
             dataType: "json",
             contentType: "text/plain"
         }).done(function (msg) {
@@ -61,7 +64,7 @@ window.addEventListener('load', function () {
                     datosRes = { "id": varid, "nombre": txtNombreIdentificador, "mensaje": txtMensajeIdentificador,"idComentario":identificador,"seccion":"respuestas" };
                     $.ajax({
                         type: "POST",
-                        url: "https://sindrome-down.herokuapp.com/datos/foro",
+                        url: "http://127.0.0.1:3000/datos/foro",
                         dataType: "text",
                         contentType: "application/json",
                         data: JSON.stringify(datosRes)
