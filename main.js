@@ -12,6 +12,7 @@ const {BrowserWindow}=electron
 
 const routerUser = require('./routes/routeUser')
 const routerForo = require('./routes/routeForo')
+const routerTema = require('./routes/routeTemas')
 
 let router=express.Router()
 router.use(bodyParser())
@@ -21,6 +22,7 @@ var port = Number(process.env.PORT || 3000);
 let appExpress= express()
 .use('/datos/mensajes',routerUser)
 .use('/datos/foro',routerForo)
+.use('/datos/temas', routerTema)
 .use(express.static(__dirname+'/public'))
 .listen(port)
 
